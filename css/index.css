@@ -1,3 +1,253 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+body{
+	padding: 50px 20px 0px 120px;
+}
+
+nav{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+nav a{
+	display: block;
+	line-height: 50px;
+	width: 200px;
+	font-size: 20px;
+	color: gray;
+	text-decoration: none;	
+}
+.header{
+	display: flex;
+	align-content: stretch;
+	justify-content: center;
+}
+.header .left, .header .right{
+	display: block;
+	width: 50%;
+	height: 15%;
+	text-align: center;	
+	padding: 20px;
+}
+.header button{
+	padding: 10px 40px;
+	border: 1px solid black;
+    border-radius: 0;
+    background-color: white;
+    font-size: 16px;
+
+}
+.header h1{
+	font-size: 60px;
+	font-weight: bolder;
+	padding-top: 100px;
+}
+.split-in-two{
+	display: flex;
+}
+.middle-img{
+	width: 100%;
+	height:	180px;
+	margin: 30px 0;
+}
+.split-in-three{
+	display: flex;
+}
+.inline-element{
+	padding: 10px;
+}
+footer{
+	text-align: center;
+	margin: 65px;
+}
+
+
+/* CSS for services page! */
+
+.services-header-img{
+	width: 100%;
+	height: 250px;
+}
+.container-services{
+	display: flex;
+	justify-content: space-between;
+	
+
+}
+.container-services .service-type{
+	border: 1px solid black;
+	padding: 40px;
+	background-color: rgb(219, 219, 219);
+	margin: 50px 0;
+}
+.container-services .service-type p{
+	font-size: 17px;
+	line-height: 25px;
+}
+.container-services .service-type button{
+	width: 150px;
+	height: 40px;
+	padding: 5px 20px;
+	border-color: black;
+	border-radius: 5px;
+	margin-top: 25px;
+	
+}
+.container-services .left{
+	width: 48%;
+}
+.container-services .right{
+	width: 48%;
+
+}
+.line{
+	border: 1px solid black;
+	margin: 30px 0;	
+}
+
+.container-services2{
+	display: flex;
+	justify-content: space-between;
+}
+ 
+.container-services2 .left{
+	width: 48%;
+}
+.container-services2 .left p{
+	line-height: 20px;
+}
+.container-services2 .left ul{
+	list-style-type: square;
+	list-style-position: inside;
+	line-height: 20px;
+	padding: 20px 0;
+}
+.container-services2 .right{
+	width: 48%;
+	background-image: url("/Users/Evelyn/Lambda/Unit1/UI-III-Flexbox/great-idea/img/services-info.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+} 
+/* CSS for Tablet */
+@media(max-width: 800px){
+	body{
+		padding: 50px 120px;
+	}
+    .logo {
+		position: absolute;
+		top: 20px;
+		left: 50%;
+		margin-left: -93.5px;
+	}
+	nav {
+		margin-top: 20px;
+	}
+	.header .right {
+		display: none;
+	}
+	.header .left {
+		width: 100%;
+	}
+	.header h1 {
+		padding-top: 30px;
+		font-size: 300%;
+	}
+}
+
+
+/* CSS for Mobil */
+
+@media(max-width: 500px){
+	nav{
+		flex-direction: column;
+		/* border: 1px solid red; */
+		justify-content: center;
+		align-items: center;
+	}
+	nav a{
+		width: 100%;
+		border-top: 1px solid black;
+		/* border-bottom: 1px solid black; */
+		text-align: center;
+	}
+	.header{
+		border-top: 1px solid black;
+	}
+	hr{
+		border:2px solid black;
+	}
+	.split-in-two{
+		flex-direction: column;
+	}
+	.split-in-three{
+		flex-direction: column;
+	}
+
+}
+
+
+
 
 
