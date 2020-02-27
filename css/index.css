@@ -190,8 +190,8 @@ footer{
 	background-repeat: no-repeat;
 	background-size: cover;
 } 
-
-@media(max-width: 768px){
+/* CSS for Tablet */
+@media(max-width: 800px){
 	body{
 		padding: 50px 120px;
 	}
@@ -214,6 +214,39 @@ footer{
 		padding-top: 30px;
 	}
 }
+
+
+/* CSS for Mobil */
+
+@media(max-width: 500px){
+	nav{
+		flex-direction: column;
+		/* border: 1px solid red; */
+		justify-content: center;
+		align-items: center;
+	}
+	nav a{
+		width: 100%;
+		border-top: 1px solid black;
+		/* border-bottom: 1px solid black; */
+		text-align: center;
+	}
+	.header{
+		border-top: 1px solid black;
+	}
+	hr{
+		border:2px solid black;
+	}
+	.split-in-two{
+		flex-direction: column;
+	}
+	.split-in-three{
+		flex-direction: column;
+	}
+
+}
+
+
 
 
 
